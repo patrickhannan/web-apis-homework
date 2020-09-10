@@ -44,3 +44,18 @@ var questions = [
     },
     
 ]
+
+// Start the quiz
+startbutton.addEventListener("click", startQuiz)
+function startQuiz () {
+    startTimer();
+    startbutton.classList.add('hide')
+    startpage.classList.add('hide')
+    currentQuestionIndex = 0;
+    questionpage.classList.remove('hide')
+    gameover.classList.add('hide')
+    time = 75;
+    currentQuestionsIndex = 0;
+    correctQuestions = 0;
+    showQuestion1();
+}
