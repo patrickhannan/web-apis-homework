@@ -47,6 +47,8 @@ var questions = [
 
 // Start the quiz
 startbutton.addEventListener("click", startQuiz)
+tryagain.addEventListener("click", startQuiz)
+
 function startQuiz () {
     startTimer();
     startbutton.classList.add('hide')
@@ -246,3 +248,12 @@ function showQuestion5() {
         
     }
 }
+
+function endGame() {
+    console.log("Quiz Complete")
+    questionpage.classList.add("hide");
+    gameover.classList.remove("hide");
+    timeEl.classList.add("hide")
+    score.textContent = "Score: " + correctQuestions;
+
+}   
