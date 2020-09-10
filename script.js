@@ -11,3 +11,36 @@ var score = document.getElementById("score")
 var gameover = document.getElementById("game-over")
 var tryagain = document.getElementById("tryagain-btn")
 var submitbtn = document.getElementById("submit")
+
+var currentQuestionsIndex = 0
+var time = 76
+var correctQuestions = 0
+
+var questions = [
+    {
+        question: "Commonly used data types DO NOT include:",
+        answers: ["Strings", "Booleans", "Alerts", "Numbers",],
+        //rightanswer: 2
+    },
+    {
+        question: "The condition in an if / else statement is enclosed within _____.",
+        answers:["Parentheses","Curly Brackets","Square Brackets","Quotes"],
+        //rightanswer: 0
+    },
+    {
+        question: "Arrays in JavaScript can be used to store _______.",
+        answers: ["Numbers & Strings", "Other Arrays", "Booleans", "All of the Above"],
+        //rightanswer: 3
+    },
+    {
+        question: "String values must be enclosed within __________ when being assigned to variables.",
+        answers: ["Curly Brackets","Parentheses", "Quotations","Commas"],
+        //rightasnwer: 2
+    },
+    {
+        question: "A very useful tool during development and debugging for printing content to the debugger is _____.",
+        answers: ["JavaScript","Console Log", "For Loops", "Bash/Terminal"],
+        //rightanswer: 1
+    },
+    
+]
