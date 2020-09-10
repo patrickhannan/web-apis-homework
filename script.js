@@ -59,3 +59,19 @@ function startQuiz () {
     correctQuestions = 0;
     showQuestion1();
 }
+
+function startTimer() {
+    var timerInterval = setInterval(function() {
+        time--;
+        timeEl.innerHTML = "Time: " + time;
+      
+        if(time === 0) {
+            endGame();
+            stopTime();
+            alert("Time is up");
+        }
+    }, 1000);
+    function stopTime() {
+        clearInterval(timerInterval)
+    }
+}
