@@ -1,5 +1,5 @@
 # web-apis-homework
-
+NOTE TO GRADER: Sorry for late commits, I was working in a different folder than this repository so I had to transfer it all over.
 ## Description 
 
 This project is a quiz about web apis. There are five questions adn you have 75 seconds to answer it. In the future there will be a high score page but right now it only shows your score at the end of the game.
@@ -26,7 +26,7 @@ At the end, the user will be able to see their score.
 ## Credits
 
 * [Build a quiz with javascript](https://www.youtube.com/watch?v=riDzcEQbX6k)
-
+* [Help with calling from arrays](https://www.w3schools.com/js/js_arrays.asp)
 
 ## License
 
