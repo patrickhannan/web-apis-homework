@@ -139,3 +139,36 @@ function showQuestion2() {
         showQuestion3(); 
     }
 }
+
+function showQuestion3() {
+    questionEl.innerText = questions[currentQuestionsIndex].question;
+    button1.innerText = questions[currentQuestionsIndex].answers[0];
+    button2.innerText = questions[currentQuestionsIndex].answers[1];
+    button3.innerText = questions[currentQuestionsIndex].answers[2];
+    button4.innerText = questions[currentQuestionsIndex].answers[3];
+    button1.onclick = function () {
+        alert("Your answer is incorrect.");
+        time -= 10;
+        currentQuestionsIndex++;
+        showQuestion4(); 
+    };
+    button2.onclick = function () {
+        alert("Your answer is incorrect.");
+        time -= 10;
+        currentQuestionsIndex++;
+        showQuestion4(); 
+    };
+    button3.onclick = function () {
+        alert("Your answer is incorrect.");
+        time -= 10;
+        currentQuestionsIndex++;
+        showQuestion4(); 
+    };
+    button4.onclick = function () {
+        alert("Your answer is correct.");
+        currentQuestionsIndex++;
+        showQuestion4(); 
+        correctQuestions++
+        
+    }
+}
