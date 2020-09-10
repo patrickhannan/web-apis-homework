@@ -172,3 +172,77 @@ function showQuestion3() {
         
     }
 }
+
+function showQuestion4() {
+    questionEl.innerText = questions[currentQuestionsIndex].question;
+    button1.innerText = questions[currentQuestionsIndex].answers[0];
+    button2.innerText = questions[currentQuestionsIndex].answers[1];
+    button3.innerText = questions[currentQuestionsIndex].answers[2];
+    button4.innerText = questions[currentQuestionsIndex].answers[3];
+    button1.onclick = function () {
+        alert("Your answer is incorrect.");
+        time -= 10;
+        currentQuestionsIndex++;
+        showQuestion5(); 
+    };
+    button2.onclick = function () {
+        alert("Your answer is incorrect.");
+        time -= 10;
+        currentQuestionsIndex++;
+        showQuestion5(); 
+    };
+    
+    button3.onclick = function () {
+        alert("Your answer is correct.");
+        currentQuestionsIndex++;
+        showQuestion5(); 
+        correctQuestions++
+    }; 
+
+    button4.onclick = function () {
+        alert("Your answer is incorrect.");
+        time -= 10;
+        currentQuestionsIndex++;
+        showQuestion5(); 
+        
+    }
+}
+
+function showQuestion5() {
+    questionEl.innerText = questions[currentQuestionsIndex].question;
+    button1.innerText = questions[currentQuestionsIndex].answers[0];
+    button2.innerText = questions[currentQuestionsIndex].answers[1];
+    button3.innerText = questions[currentQuestionsIndex].answers[2];
+    button4.innerText = questions[currentQuestionsIndex].answers[3];
+    button1.onclick = function () {
+        alert("Your answer is incorrect.");
+        currentQuestionsIndex = 0
+        time -= 10;
+        endGame();
+        
+    };
+    button2.onclick = function () {
+        alert("Your answer is correct.");
+        correctQuestions++
+        currentQuestionsIndex = 0
+        endGame();
+        
+            
+    };
+    button3.onclick = function () {
+        alert("Your answer is incorrect.");
+        currentQuestionsIndex = 0
+        time -= 10;
+        endGame();
+        
+        
+    };
+    button4.onclick = function () {
+        alert("Your answer is incorrect.");
+        time -= 10;
+        currentQuestionsIndex = 0
+        endGame();
+        
+        
+    }
+}
