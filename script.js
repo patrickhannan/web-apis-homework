@@ -75,3 +75,35 @@ function startTimer() {
         clearInterval(timerInterval)
     }
 }
+
+function showQuestion1() {
+    questionEl.innerText = questions[currentQuestionsIndex].question;
+    button1.innerText = questions[currentQuestionsIndex].answers[0];
+    button2.innerText = questions[currentQuestionsIndex].answers[1];
+    button3.innerText = questions[currentQuestionsIndex].answers[2];
+    button4.innerText = questions[currentQuestionsIndex].answers[3];
+    button1.onclick = function () {
+        alert("Your answer is incorrect.");
+        time -= 10; 
+        currentQuestionsIndex++;
+        showQuestion2(); 
+    };
+    button2.onclick = function () {
+        alert("Your answer is incorrect.");
+        time -= 10;
+        currentQuestionsIndex++;
+        showQuestion2(); 
+    };
+    button3.onclick = function () {
+        alert("Your answer is correct.");
+        currentQuestionsIndex++;
+        showQuestion2(); 
+        correctQuestions++
+    };
+    button4.onclick = function () {
+        alert("Your answer is incorrect.");
+        time -= 10;
+        currentQuestionsIndex++;
+        showQuestion2(); 
+    }
+}
